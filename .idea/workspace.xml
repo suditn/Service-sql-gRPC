@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbc6801d-2b8d-439c-a9a5-cf9e8fe0ae2d" name="Changes" comment="new">
-      <change afterPath="$PROJECT_DIR$/traffic.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic.proto" beforeDir="false" afterPath="$PROJECT_DIR$/traffic.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/traffic_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/traffic_pb2_grpc.py" afterDir="false" />
-    </list>
+    <list default="true" id="cbc6801d-2b8d-439c-a9a5-cf9e8fe0ae2d" name="Changes" comment="new" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733727198273</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="new">
+      <option name="closed" value="true" />
+      <created>1733728499390</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733728499390</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
