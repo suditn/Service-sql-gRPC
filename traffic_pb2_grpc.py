@@ -26,7 +26,8 @@ if _version_not_supported:
 
 
 class TrafficServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
+    """gRPC-сервис
+    """
 
     def __init__(self, channel):
         """Constructor.
@@ -37,16 +38,16 @@ class TrafficServiceStub(object):
         self.GetTotalTraffic = channel.unary_unary(
                 '/traffic.TrafficService/GetTotalTraffic',
                 request_serializer=traffic__pb2.TrafficRequest.SerializeToString,
-                response_deserializer=traffic__pb2.TrafficResponse.FromString,
+                response_deserializer=traffic__pb2.AllTrafficResponse.FromString,
                 _registered_method=True)
 
 
 class TrafficServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
+    """gRPC-сервис
+    """
 
     def GetTotalTraffic(self, request, context):
-        """Метод для получения суммарного трафика
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -57,7 +58,7 @@ def add_TrafficServiceServicer_to_server(servicer, server):
             'GetTotalTraffic': grpc.unary_unary_rpc_method_handler(
                     servicer.GetTotalTraffic,
                     request_deserializer=traffic__pb2.TrafficRequest.FromString,
-                    response_serializer=traffic__pb2.TrafficResponse.SerializeToString,
+                    response_serializer=traffic__pb2.AllTrafficResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -68,7 +69,8 @@ def add_TrafficServiceServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class TrafficService(object):
-    """Missing associated documentation comment in .proto file."""
+    """gRPC-сервис
+    """
 
     @staticmethod
     def GetTotalTraffic(request,
@@ -86,7 +88,7 @@ class TrafficService(object):
             target,
             '/traffic.TrafficService/GetTotalTraffic',
             traffic__pb2.TrafficRequest.SerializeToString,
-            traffic__pb2.TrafficResponse.FromString,
+            traffic__pb2.AllTrafficResponse.FromString,
             options,
             channel_credentials,
             insecure,

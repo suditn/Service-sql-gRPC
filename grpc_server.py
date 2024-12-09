@@ -8,42 +8,53 @@ import traffic_pb2_grpc
 # Реализация сервиса
 class TrafficService(traffic_pb2_grpc.TrafficServiceServicer):
     def GetTotalTraffic(self, request, context):
-        # Подключаемся к базе данных SQLite
         conn = sqlite3.connect("traffic_db.sqlite")
         cursor = conn.cursor()
 
-        # Формируем запрос с фильтрацией
+        # Базовый запрос для всех клиентов
         query = """
-        SELECT SUM(received_traffic) FROM traffic
+        SELECT customers.name, SUM(received_traffic)
+        FROM traffic
         JOIN customers ON traffic.customer_id = customers.id
-        WHERE customers.name = ?
+        WHERE 1=1
         """
-        params = [request.customer_name]
+        params = []
 
-        # Добавляем фильтры по дате
+        # Фильтрация по имени клиента
+        if request.customer_name:
+            query += " AND customers.name = ?"
+            params.append(request.customer_name)
+
+        # Фильтрация по диапазону дат
         if request.start_date:
             query += " AND date >= ?"
             params.append(request.start_date)
         if request.end_date:
             query += " AND date <= ?"
             params.append(request.end_date)
+
+        # Фильтрация по ip
         if request.ip:
             query += " AND ip = ?"
             params.append(request.ip)
 
-        # Выполняем запрос
-        cursor.execute(query, params)
-        result = cursor.fetchone()
-        total_traffic = result[0] if result[0] else 0.0
+        # Группировка по клиентам
+        query += " GROUP BY customers.name"
 
-        # Закрываем соединение с базой
+        cursor.execute(query, params)
+        results = cursor.fetchall()
         conn.close()
 
-        # Возвращаем результат
-        return traffic_pb2.TrafficResponse(
-            customer_name=request.customer_name,
-            total_traffic=total_traffic,
-        )
+        # Формируем ответ
+        traffic_list = [
+            traffic_pb2.CustomerTraffic(
+                customer_name=row[0],
+                total_traffic=row[1] if row[1] else 0.0
+            )
+            for row in results
+        ]
+
+        return traffic_pb2.AllTrafficResponse(traffic_list=traffic_list)
 
 # Запуск сервера
 def serve():

@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbc6801d-2b8d-439c-a9a5-cf9e8fe0ae2d" name="Changes" comment="new">
-      <change afterPath="$PROJECT_DIR$/.idea/ServicesqlgRPC.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grpc_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grpc_server.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/traffic.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/traffic_pb2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/traffic_pb2_grpc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/traffic.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traffic.proto" beforeDir="false" afterPath="$PROJECT_DIR$/traffic.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traffic_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/traffic_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traffic_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/traffic_pb2_grpc.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +88,47 @@
       <option name="presentableId" value="Default" />
       <updated>1733725131113</updated>
     </task>
+    <task id="LOCAL-00001" summary="new">
+      <option name="closed" value="true" />
+      <created>1733726178237</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733726178237</updated>
+    </task>
+    <task id="LOCAL-00002" summary="new">
+      <option name="closed" value="true" />
+      <created>1733726226979</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733726226979</updated>
+    </task>
+    <task id="LOCAL-00003" summary="new">
+      <option name="closed" value="true" />
+      <created>1733726259460</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733726259460</updated>
+    </task>
+    <task id="LOCAL-00004" summary="new">
+      <option name="closed" value="true" />
+      <created>1733726606330</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733726606330</updated>
+    </task>
+    <task id="LOCAL-00005" summary="new">
+      <option name="closed" value="true" />
+      <created>1733727198273</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733727198273</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

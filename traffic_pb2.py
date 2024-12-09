@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rtraffic.proto\x12\x07traffic\"Y\n\x0eTrafficRequest\x12\x15\n\rcustomer_name\x18\x01 \x01(\t\x12\x12\n\nstart_date\x18\x02 \x01(\t\x12\x10\n\x08\x65nd_date\x18\x03 \x01(\t\x12\n\n\x02ip\x18\x04 \x01(\t\"?\n\x0fTrafficResponse\x12\x15\n\rcustomer_name\x18\x01 \x01(\t\x12\x15\n\rtotal_traffic\x18\x02 \x01(\x01\x32V\n\x0eTrafficService\x12\x44\n\x0fGetTotalTraffic\x12\x17.traffic.TrafficRequest\x1a\x18.traffic.TrafficResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rtraffic.proto\x12\x07traffic\"Y\n\x0eTrafficRequest\x12\x15\n\rcustomer_name\x18\x01 \x01(\t\x12\x12\n\nstart_date\x18\x02 \x01(\t\x12\x10\n\x08\x65nd_date\x18\x03 \x01(\t\x12\n\n\x02ip\x18\x04 \x01(\t\"D\n\x12\x41llTrafficResponse\x12.\n\x0ctraffic_list\x18\x01 \x03(\x0b\x32\x18.traffic.CustomerTraffic\"?\n\x0f\x43ustomerTraffic\x12\x15\n\rcustomer_name\x18\x01 \x01(\t\x12\x15\n\rtotal_traffic\x18\x02 \x01(\x01\x32Y\n\x0eTrafficService\x12G\n\x0fGetTotalTraffic\x12\x17.traffic.TrafficRequest\x1a\x1b.traffic.AllTrafficResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -33,8 +33,10 @@ if not _descriptor._USE_C_DESCRIPTORS:
   DESCRIPTOR._loaded_options = None
   _globals['_TRAFFICREQUEST']._serialized_start=26
   _globals['_TRAFFICREQUEST']._serialized_end=115
-  _globals['_TRAFFICRESPONSE']._serialized_start=117
-  _globals['_TRAFFICRESPONSE']._serialized_end=180
-  _globals['_TRAFFICSERVICE']._serialized_start=182
-  _globals['_TRAFFICSERVICE']._serialized_end=268
+  _globals['_ALLTRAFFICRESPONSE']._serialized_start=117
+  _globals['_ALLTRAFFICRESPONSE']._serialized_end=185
+  _globals['_CUSTOMERTRAFFIC']._serialized_start=187
+  _globals['_CUSTOMERTRAFFIC']._serialized_end=250
+  _globals['_TRAFFICSERVICE']._serialized_start=252
+  _globals['_TRAFFICSERVICE']._serialized_end=341
 # @@protoc_insertion_point(module_scope)

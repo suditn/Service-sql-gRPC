@@ -2,19 +2,26 @@ syntax = "proto3";
 
 package traffic;
 
+// gRPC-сервис
 service TrafficService {
-  // Метод для получения суммарного трафика
-  rpc GetTotalTraffic (TrafficRequest) returns (TrafficResponse);
+  rpc GetTotalTraffic (TrafficRequest) returns (AllTrafficResponse);
 }
 
+// Запрос для фильтров
 message TrafficRequest {
   string customer_name = 1; // Имя клиента
   string start_date = 2;    // Начало периода
   string end_date = 3;      // Конец периода
-  string ip = 4;            // IP-адрес (опционально)
+  string ip = 4;            // IP-адрес
 }
 
-message TrafficResponse {
+// Ответ для всех клиентов
+message AllTrafficResponse {
+  repeated CustomerTraffic traffic_list = 1; // Список клиентов и их трафика
+}
+
+// Информация о клиенте
+message CustomerTraffic {
   string customer_name = 1;
-  double total_traffic = 2; // Суммарный трафик в МБ
+  double total_traffic = 2;
 }
